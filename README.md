@@ -13,4 +13,4 @@
 ```
 * Assign the included velocity format to a region with a "current page" index block
 * In a wysiwyg, add the word tweet followed by a space and tweet id enclosed in square brackets
-** For example: [tweet 785920300441481217]
+  * For example: [tweet 785920300441481217]
