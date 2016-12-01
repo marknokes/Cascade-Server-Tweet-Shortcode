@@ -1,0 +1,18 @@
+#**********************************************************************************************************************
+*	Required javascript
+*
+*	<!-- jQuery -->
+*	<script language="javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+*	
+*	<!-- Twitter -->
+*	<script type="text/javascript" src="https://platform.twitter.com/widgets.js"></script>
+*
+**********************************************************************************************************************#
+
+#set ( $page = $_XPathTool.selectSingleNode( $contentRoot, "/system-index-block/calling-page/system-page/system-data-structure" ) )
+#set ( $content = $_SerializerTool.serialize( $page.getChild("content"), true ) )
+#if( $content.contains("[tweet") )
+    $content.replaceAll("(\[tweet\s)([0-9]+)\]", "<script>\$(document).ready(function () {\$\.getJSON('https://api.twitter.com/1/statuses/oembed.json?id=$2&amp;align=center&amp;maxwidth=300&amp;callback=?',function(data){\$('#tweet-container').html(data.html);})});</script><div id='tweet-container'></div>")
+#else
+    $content
+#end
