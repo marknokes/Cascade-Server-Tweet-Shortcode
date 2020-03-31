@@ -1,4 +1,9 @@
-# Cascade Server - Embed single tweet shortcode format
+## Donation
+If you find this plugin useful, please consider making a donation. Thank you!
+
+[![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=HQFGGDAGHHM22)
+
+# Cascade CMS - Embed single tweet shortcode format
 
 ## Usage
 
